@@ -10,6 +10,8 @@ Carthage/
 
 #Mac Folder
 ../.DS_Store
+.DS_Store
+.DS_Store?
 
 # User-specific stuff
 .idea/**/workspace.xml
