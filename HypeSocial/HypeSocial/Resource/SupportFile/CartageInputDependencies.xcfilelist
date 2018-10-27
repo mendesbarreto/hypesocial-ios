@@ -1,0 +1,8 @@
+# Carthage Dependencies Input List
+
+$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework
+$(SRCROOT)/Carthage/Build/iOS/Moya.framework
+$(SRCROOT)/Carthage/Build/iOS/Result.framework
+$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework
+$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework
+$(SRCROOT)/Carthage/Build/iOS/MSAL.framework

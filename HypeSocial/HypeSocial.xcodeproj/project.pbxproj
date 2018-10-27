@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57DFCEE82185052B0048F450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEE72185052B0048F450 /* AppDelegate.swift */; };
+		57DFCEEA2185052B0048F450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEE92185052B0048F450 /* ViewController.swift */; };
+		57DFCEED2185052B0048F450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEB2185052B0048F450 /* Main.storyboard */; };
+		57DFCEEF2185052D0048F450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEE2185052D0048F450 /* Assets.xcassets */; };
+		57DFCEF22185052D0048F450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEF02185052D0048F450 /* LaunchScreen.storyboard */; };
+		57DFCEFD2185052E0048F450 /* HypeSocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEFC2185052E0048F450 /* HypeSocialTests.swift */; };
+		57DFCF3C21851F900048F450 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF3921851F8C0048F450 /* Alamofire.framework */; };
+		57DFCF3D21851F900048F450 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF3621851F8B0048F450 /* Moya.framework */; };
+		57DFCF3F21851F900048F450 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF3A21851F8C0048F450 /* Result.framework */; };
+		57DFCF4121851F910048F450 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF3B21851F8C0048F450 /* RxSwift.framework */; };
+		57DFCF432185210D0048F450 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF422185210D0048F450 /* RxMoya.framework */; };
+		57DFCF45218524670048F450 /* MSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF44218524670048F450 /* MSAL.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57DFCEF92185052D0048F450 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57DFCEDC2185052B0048F450 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57DFCEE32185052B0048F450;
+			remoteInfo = HypeSocial;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		57DFCF0821850DFD0048F450 /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		57DFCEE42185052B0048F450 /* HypeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DFCEE72185052B0048F450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		57DFCEE92185052B0048F450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		57DFCEEC2185052B0048F450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		57DFCEEE2185052D0048F450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57DFCEF12185052D0048F450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		57DFCEF32185052D0048F450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57DFCEF82185052D0048F450 /* HypeSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypeSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57DFCEFC2185052E0048F450 /* HypeSocialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeSocialTests.swift; sourceTree = "<group>"; };
+		57DFCEFE2185052E0048F450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57DFCF0D218510910048F450 /* CartageInputDependencies.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CartageInputDependencies.xcfilelist; sourceTree = "<group>"; };
+		57DFCF0F2185125D0048F450 /* CartageOutputDependencies.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CartageOutputDependencies.xcfilelist; sourceTree = "<group>"; };
+		57DFCF3621851F8B0048F450 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		57DFCF3921851F8C0048F450 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		57DFCF3A21851F8C0048F450 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		57DFCF3B21851F8C0048F450 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		57DFCF422185210D0048F450 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		57DFCF44218524670048F450 /* MSAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MSAL.framework; path = Carthage/Build/iOS/MSAL.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57DFCEE12185052B0048F450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DFCF432185210D0048F450 /* RxMoya.framework in Frameworks */,
+				57DFCF3C21851F900048F450 /* Alamofire.framework in Frameworks */,
+				57DFCF3D21851F900048F450 /* Moya.framework in Frameworks */,
+				57DFCF45218524670048F450 /* MSAL.framework in Frameworks */,
+				57DFCF3F21851F900048F450 /* Result.framework in Frameworks */,
+				57DFCF4121851F910048F450 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DFCEF52185052D0048F450 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57DFCEDB2185052B0048F450 = {
+			isa = PBXGroup;
+			children = (
+				57DFCEE62185052B0048F450 /* HypeSocial */,
+				57DFCEFB2185052D0048F450 /* HypeSocialTests */,
+				57DFCEE52185052B0048F450 /* Products */,
+				57DFCF30218516A40048F450 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		57DFCEE52185052B0048F450 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57DFCEE42185052B0048F450 /* HypeSocial.app */,
+				57DFCEF82185052D0048F450 /* HypeSocialTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57DFCEE62185052B0048F450 /* HypeSocial */ = {
+			isa = PBXGroup;
+			children = (
+				57DFCF0A21850F550048F450 /* Resource */,
+				57DFCEE72185052B0048F450 /* AppDelegate.swift */,
+				57DFCEE92185052B0048F450 /* ViewController.swift */,
+				57DFCEEB2185052B0048F450 /* Main.storyboard */,
+				57DFCEF02185052D0048F450 /* LaunchScreen.storyboard */,
+				57DFCEF32185052D0048F450 /* Info.plist */,
+			);
+			path = HypeSocial;
+			sourceTree = "<group>";
+		};
+		57DFCEFB2185052D0048F450 /* HypeSocialTests */ = {
+			isa = PBXGroup;
+			children = (
+				57DFCEFC2185052E0048F450 /* HypeSocialTests.swift */,
+				57DFCEFE2185052E0048F450 /* Info.plist */,
+			);
+			path = HypeSocialTests;
+			sourceTree = "<group>";
+		};
+		57DFCF0A21850F550048F450 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				57DFCF0C21850F9F0048F450 /* SupportFile */,
+				57DFCF0B21850F950048F450 /* Assets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		57DFCF0B21850F950048F450 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		57DFCF0C21850F9F0048F450 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				57DFCF0F2185125D0048F450 /* CartageOutputDependencies.xcfilelist */,
+				57DFCEEE2185052D0048F450 /* Assets.xcassets */,
+				57DFCF0D218510910048F450 /* CartageInputDependencies.xcfilelist */,
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		57DFCF30218516A40048F450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57DFCF44218524670048F450 /* MSAL.framework */,
+				57DFCF422185210D0048F450 /* RxMoya.framework */,
+				57DFCF3921851F8C0048F450 /* Alamofire.framework */,
+				57DFCF3621851F8B0048F450 /* Moya.framework */,
+				57DFCF3A21851F8C0048F450 /* Result.framework */,
+				57DFCF3B21851F8C0048F450 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57DFCEE32185052B0048F450 /* HypeSocial */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57DFCF012185052E0048F450 /* Build configuration list for PBXNativeTarget "HypeSocial" */;
+			buildPhases = (
+				57DFCF0921850E120048F450 /* Carthage */,
+				57DFCF0821850DFD0048F450 /* Carthage */,
+				57DFCEE02185052B0048F450 /* Sources */,
+				57DFCEE12185052B0048F450 /* Frameworks */,
+				57DFCEE22185052B0048F450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HypeSocial;
+			productName = HypeSocial;
+			productReference = 57DFCEE42185052B0048F450 /* HypeSocial.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57DFCEF72185052D0048F450 /* HypeSocialTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57DFCF042185052E0048F450 /* Build configuration list for PBXNativeTarget "HypeSocialTests" */;
+			buildPhases = (
+				57DFCEF42185052D0048F450 /* Sources */,
+				57DFCEF52185052D0048F450 /* Frameworks */,
+				57DFCEF62185052D0048F450 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57DFCEFA2185052D0048F450 /* PBXTargetDependency */,
+			);
+			name = HypeSocialTests;
+			productName = HypeSocialTests;
+			productReference = 57DFCEF82185052D0048F450 /* HypeSocialTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57DFCEDC2185052B0048F450 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Douglas Mendes";
+				TargetAttributes = {
+					57DFCEE32185052B0048F450 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					57DFCEF72185052D0048F450 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 57DFCEE32185052B0048F450;
+					};
+				};
+			};
+			buildConfigurationList = 57DFCEDF2185052B0048F450 /* Build configuration list for PBXProject "HypeSocial" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57DFCEDB2185052B0048F450;
+			productRefGroup = 57DFCEE52185052B0048F450 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57DFCEE32185052B0048F450 /* HypeSocial */,
+				57DFCEF72185052D0048F450 /* HypeSocialTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57DFCEE22185052B0048F450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DFCEF22185052D0048F450 /* LaunchScreen.storyboard in Resources */,
+				57DFCEEF2185052D0048F450 /* Assets.xcassets in Resources */,
+				57DFCEED2185052B0048F450 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DFCEF62185052D0048F450 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57DFCF0921850E120048F450 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/HypeSocial/Resource/SupportFile/CartageInputDependencies.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/HypeSocial/Resource/SupportFile/CartageOutputDependencies.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57DFCEE02185052B0048F450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DFCEEA2185052B0048F450 /* ViewController.swift in Sources */,
+				57DFCEE82185052B0048F450 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57DFCEF42185052D0048F450 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57DFCEFD2185052E0048F450 /* HypeSocialTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57DFCEFA2185052D0048F450 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57DFCEE32185052B0048F450 /* HypeSocial */;
+			targetProxy = 57DFCEF92185052D0048F450 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		57DFCEEB2185052B0048F450 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57DFCEEC2185052B0048F450 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		57DFCEF02185052D0048F450 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				57DFCEF12185052D0048F450 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		57DFCEFF2185052E0048F450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-warn-long-expression-type-checking=100 -Xfrontend  -warn-long-function-bodies=100";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57DFCF002185052E0048F450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57DFCF022185052E0048F450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQVLGGBH98;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HypeSocial/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.levio.HypeSocial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		57DFCF032185052E0048F450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQVLGGBH98;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = HypeSocial/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.levio.HypeSocial;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		57DFCF052185052E0048F450 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQVLGGBH98;
+				INFOPLIST_FILE = HypeSocialTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.levio.HypeSocialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HypeSocial.app/HypeSocial";
+			};
+			name = Debug;
+		};
+		57DFCF062185052E0048F450 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WQVLGGBH98;
+				INFOPLIST_FILE = HypeSocialTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ca.levio.HypeSocialTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HypeSocial.app/HypeSocial";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57DFCEDF2185052B0048F450 /* Build configuration list for PBXProject "HypeSocial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DFCEFF2185052E0048F450 /* Debug */,
+				57DFCF002185052E0048F450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57DFCF012185052E0048F450 /* Build configuration list for PBXNativeTarget "HypeSocial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DFCF022185052E0048F450 /* Debug */,
+				57DFCF032185052E0048F450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57DFCF042185052E0048F450 /* Build configuration list for PBXNativeTarget "HypeSocialTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57DFCF052185052E0048F450 /* Debug */,
+				57DFCF062185052E0048F450 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 57DFCEDC2185052B0048F450 /* Project object */;
+}
