@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		57DFCEEF2185052D0048F450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEE2185052D0048F450 /* Assets.xcassets */; };
 		57DFCEF22185052D0048F450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEF02185052D0048F450 /* LaunchScreen.storyboard */; };
 		57DFCEFD2185052E0048F450 /* HypeSocialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEFC2185052E0048F450 /* HypeSocialTests.swift */; };
+		57DFCF31218516A40048F450 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF232185167C0048F450 /* Alamofire.framework */; };
+		57DFCF32218516A40048F450 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF202185167C0048F450 /* Moya.framework */; };
+		57DFCF33218516A40048F450 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF242185167C0048F450 /* Result.framework */; };
+		57DFCF34218516A40048F450 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF212185167C0048F450 /* RxMoya.framework */; };
+		57DFCF35218516A40048F450 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF222185167C0048F450 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +30,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		57DFCF0821850DFD0048F450 /* Carthage */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = Carthage;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		57DFCEE42185052B0048F450 /* HypeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DFCEE72185052B0048F450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +54,18 @@
 		57DFCEF82185052D0048F450 /* HypeSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypeSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DFCEFC2185052E0048F450 /* HypeSocialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeSocialTests.swift; sourceTree = "<group>"; };
 		57DFCEFE2185052E0048F450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57DFCF0D218510910048F450 /* CartageInputDependencies.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CartageInputDependencies.xcfilelist; sourceTree = "<group>"; };
+		57DFCF0F2185125D0048F450 /* CartageOutputDependencies.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = CartageOutputDependencies.xcfilelist; sourceTree = "<group>"; };
+		57DFCF10218516190048F450 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		57DFCF11218516190048F450 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		57DFCF12218516190048F450 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		57DFCF13218516190048F450 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		57DFCF14218516190048F450 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		57DFCF202185167C0048F450 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		57DFCF212185167C0048F450 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		57DFCF222185167C0048F450 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		57DFCF232185167C0048F450 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		57DFCF242185167C0048F450 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +73,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57DFCF31218516A40048F450 /* Alamofire.framework in Frameworks */,
+				57DFCF32218516A40048F450 /* Moya.framework in Frameworks */,
+				57DFCF33218516A40048F450 /* Result.framework in Frameworks */,
+				57DFCF34218516A40048F450 /* RxMoya.framework in Frameworks */,
+				57DFCF35218516A40048F450 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +94,20 @@
 		57DFCEDB2185052B0048F450 = {
 			isa = PBXGroup;
 			children = (
+				57DFCF13218516190048F450 /* Alamofire.framework */,
+				57DFCF232185167C0048F450 /* Alamofire.framework */,
+				57DFCF10218516190048F450 /* Moya.framework */,
+				57DFCF14218516190048F450 /* Result.framework */,
+				57DFCF242185167C0048F450 /* Result.framework */,
+				57DFCF11218516190048F450 /* RxMoya.framework */,
+				57DFCF12218516190048F450 /* RxSwift.framework */,
+				57DFCF202185167C0048F450 /* Moya.framework */,
+				57DFCF212185167C0048F450 /* RxMoya.framework */,
+				57DFCF222185167C0048F450 /* RxSwift.framework */,
 				57DFCEE62185052B0048F450 /* HypeSocial */,
 				57DFCEFB2185052D0048F450 /* HypeSocialTests */,
 				57DFCEE52185052B0048F450 /* Products */,
+				57DFCF30218516A40048F450 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,10 +123,10 @@
 		57DFCEE62185052B0048F450 /* HypeSocial */ = {
 			isa = PBXGroup;
 			children = (
+				57DFCF0A21850F550048F450 /* Resource */,
 				57DFCEE72185052B0048F450 /* AppDelegate.swift */,
 				57DFCEE92185052B0048F450 /* ViewController.swift */,
 				57DFCEEB2185052B0048F450 /* Main.storyboard */,
-				57DFCEEE2185052D0048F450 /* Assets.xcassets */,
 				57DFCEF02185052D0048F450 /* LaunchScreen.storyboard */,
 				57DFCEF32185052D0048F450 /* Info.plist */,
 			);
@@ -96,6 +142,39 @@
 			path = HypeSocialTests;
 			sourceTree = "<group>";
 		};
+		57DFCF0A21850F550048F450 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				57DFCF0C21850F9F0048F450 /* SupportFile */,
+				57DFCF0B21850F950048F450 /* Assets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		57DFCF0B21850F950048F450 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		57DFCF0C21850F9F0048F450 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				57DFCF0F2185125D0048F450 /* CartageOutputDependencies.xcfilelist */,
+				57DFCEEE2185052D0048F450 /* Assets.xcassets */,
+				57DFCF0D218510910048F450 /* CartageInputDependencies.xcfilelist */,
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		57DFCF30218516A40048F450 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,6 +182,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57DFCF012185052E0048F450 /* Build configuration list for PBXNativeTarget "HypeSocial" */;
 			buildPhases = (
+				57DFCF0921850E120048F450 /* Carthage */,
+				57DFCF0821850DFD0048F450 /* Carthage */,
 				57DFCEE02185052B0048F450 /* Sources */,
 				57DFCEE12185052B0048F450 /* Frameworks */,
 				57DFCEE22185052B0048F450 /* Resources */,
@@ -191,6 +272,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		57DFCF0921850E120048F450 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/HypeSocial/Resource/SupportFile/CartageInputDependencies.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/HypeSocial/Resource/SupportFile/CartageOutputDependencies.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		57DFCEE02185052B0048F450 /* Sources */ = {
@@ -295,6 +399,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-warn-long-expression-type-checking=100 -Xfrontend  -warn-long-function-bodies=100";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -362,12 +467,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQVLGGBH98;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HypeSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "-Xfrontend -warn-long-expression-type-checking=100 -warn-long-function-bodies=100";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ca.levio.HypeSocial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -381,6 +490,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQVLGGBH98;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HypeSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
