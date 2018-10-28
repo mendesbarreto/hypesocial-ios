@@ -68,6 +68,7 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
                 return
             }
 
+            print(result.accessToken!)
             strongSelf.accessToken = result.accessToken!
             strongSelf.updateLogging(text: "Access token is \(strongSelf.accessToken)")
             strongSelf.updateSignoutButton(enabled: true)
@@ -81,6 +82,7 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
 
     func updateLogging(text: String) {
         loggingText.text += "\(text)\n"
+        print("\(text)\n")
     }
 
     func acquireTokenSilently() {
