@@ -41,16 +41,16 @@
 	</array>
 	<key>CFBundleURLTypes</key>
 	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>000000004024AA84</string>
-			</array>
-		</dict>
+	    <dict>
+	        <key>CFBundleTypeRole</key>
+	        <string>Editor</string>
+	        <key>CFBundleURLName</key>
+	        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	        <key>CFBundleURLSchemes</key>
+	        <array>
+	            <string>msal16c34857-fd53-447b-846a-fee84c368aaa</string>
+	        </array>
+	    </dict>
 	</array>
 </dict>
 </plist>
