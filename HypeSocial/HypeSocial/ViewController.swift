@@ -4,13 +4,14 @@ import MSAL
 struct Application {
     static let clientID = "16c34857-fd53-447b-846a-fee84c368aaa"
     static let graphURI = "https://graph.microsoft.com/v1.0/me/"
-    static let scopes: [String] = ["https://graph.microsoft.com/user.read"]
+    static let scopes: [String] = ["https://graph.microsoft.com/user.read", "https://graph.microsoft.com/contacts.read"]
     static let authority = "https://login.microsoftonline.com/common"
 }
 
 final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDelegate {
 
-    private var accessToken = String()
+    private var accessToken: String = ""
+    private var idToken: String = ""
     private var applicationContext : MSALPublicClientApplication?
 
     @IBOutlet private weak var loggingText: UITextView!
@@ -22,6 +23,7 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
+            UIView.animate(withDuration: <#T##TimeInterval##Foundation.TimeInterval#>, animations: <#T##@escaping () -> Void##@escaping () -> Swift.Void#>)
             guard let authorityURL = URL(string: Application.authority) else {
                 updateLogging(text: "Unable to create authority URL")
                 return
@@ -87,18 +89,20 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
 
     func acquireTokenSilently() {
         guard let applicationContext = self.applicationContext else { return }
-        applicationContext.acquireTokenSilent(forScopes: Application.scopes, account: currentAccount()) { (result, error) in
+        applicationContext.acquireTokenSilent(forScopes: Application.scopes, account: currentAccount()) { [weak self] (result, error) in
+            guard let strongSelf = self else { return }
+
             if let error = error {
                 let nsError = error as NSError
                 if (nsError.domain == MSALErrorDomain
                         && nsError.code == MSALErrorCode.interactionRequired.rawValue) {
 
                     DispatchQueue.main.async {
-                        self.acquireTokenInteractively()
+                        strongSelf.acquireTokenInteractively()
                     }
                 } else {
                     DispatchQueue.main.async {
-                        self.updateLogging(text: "Could not acquire token silently: \(error)")
+                        strongSelf.updateLogging(text: "Could not acquire token silently: \(error)")
                     }
                 }
 
@@ -107,16 +111,18 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
 
             guard let result = result else {
                 DispatchQueue.main.async {
-                    self.updateLogging(text: "Could not acquire token: No result returned")
+                    strongSelf.updateLogging(text: "Could not acquire token: No result returned")
                 }
                 return
             }
 
             DispatchQueue.main.async {
-                self.accessToken = result.accessToken!
-                self.updateLogging(text: "Refreshed Access token is \(self.accessToken)")
-                self.updateSignoutButton(enabled: true)
-                self.getContentWithToken()
+                strongSelf.idToken = result.idToken
+                strongSelf.accessToken = result.accessToken!
+                strongSelf.updateLogging(text: "Refreshed Access token is \(strongSelf.accessToken)")
+                strongSelf.updateSignoutButton(enabled: true)
+                strongSelf.getContentWithToken()
+                strongSelf.updateLogging(text: "\n\n \(strongSelf.idToken)")
             }
         }
     }
@@ -140,21 +146,24 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
 
     func getContentWithToken() {
         let url = URL(string: Application.graphURI)
+        print("Bearer \(self.accessToken)")
         var request = URLRequest(url: url!)
         request.setValue("Bearer \(self.accessToken)", forHTTPHeaderField: "Authorization")
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            guard let strongSelf = self else { return }
+
             if let error = error {
-                self.updateLogging(text: "Couldn't get graph result: \(error)")
+                strongSelf.updateLogging(text: "Couldn't get graph result: \(error)")
                 return
             }
 
             guard let result = try? JSONSerialization.jsonObject(with: data!, options: []) else {
 
-                self.updateLogging(text: "Couldn't deserialize result JSON")
+                strongSelf.updateLogging(text: "Couldn't deserialize result JSON")
                 return
             }
 
-            self.updateLogging(text: "Result from Graph: \(result))")
+            strongSelf.updateLogging(text: "Result from Graph: \(result))")
 
         }.resume()
     }
@@ -162,7 +171,7 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
     @IBAction func signoutButton(_ sender: UIButton) {
         guard let applicationContext = self.applicationContext else { return }
         guard let account = self.currentAccount() else { return }
-
+        
         do {
             try applicationContext.remove(account)
             loggingText.text = ""
