@@ -1,0 +1,6 @@
+framework module Pods_HypeSocialTests {
+  umbrella header "Pods-HypeSocialTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

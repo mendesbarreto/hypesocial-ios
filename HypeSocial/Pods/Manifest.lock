@@ -1,0 +1,20 @@
+PODS:
+  - Cards (1.3.4):
+    - Player (= 0.8.4)
+  - Player (0.8.4)
+
+DEPENDENCIES:
+  - Cards
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Cards
+    - Player
+
+SPEC CHECKSUMS:
+  Cards: 99d16dddcd0789c4d0ba1a4230458beecbdbe3d4
+  Player: e45514e9e5fb8ff18f50eb2ba6f84dac9b6a0024
+
+PODFILE CHECKSUM: d61c9e676b97dab2b6035798746b4a605703289e
+
+COCOAPODS: 1.5.3
