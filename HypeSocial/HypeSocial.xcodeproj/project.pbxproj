@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		125011479E9C65CF976E8643 /* Pods_HypeSocialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C39DB3EB8D41D58E3D22EA /* Pods_HypeSocialTests.framework */; };
-		567121F55BDAB26496873410 /* Pods_HypeSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A46C070C6EF537D066D4E08 /* Pods_HypeSocial.framework */; };
 		57DFCEE82185052B0048F450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEE72185052B0048F450 /* AppDelegate.swift */; };
 		57DFCEEA2185052B0048F450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEE92185052B0048F450 /* ViewController.swift */; };
 		57DFCEED2185052B0048F450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEB2185052B0048F450 /* Main.storyboard */; };
@@ -47,9 +45,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3BBDCBF47C3E1B1A35017BF5 /* Pods-HypeSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial.debug.xcconfig"; sourceTree = "<group>"; };
-		48D07DD30A029B717A1297DF /* Pods-HypeSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial.release.xcconfig"; sourceTree = "<group>"; };
-		4A46C070C6EF537D066D4E08 /* Pods_HypeSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HypeSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DFCEE42185052B0048F450 /* HypeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DFCEE72185052B0048F450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57DFCEE92185052B0048F450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,9 +64,6 @@
 		57DFCF422185210D0048F450 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		57DFCF44218524670048F450 /* MSAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MSAL.framework; path = Carthage/Build/iOS/MSAL.framework; sourceTree = "<group>"; };
 		57DFCF4C218632F10048F450 /* HypeSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HypeSocial.entitlements; sourceTree = "<group>"; };
-		C2C39DB3EB8D41D58E3D22EA /* Pods_HypeSocialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HypeSocialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4C77F8B65E1B80739FA62E7 /* Pods-HypeSocialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocialTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocialTests/Pods-HypeSocialTests.release.xcconfig"; sourceTree = "<group>"; };
-		FE04D0DCFBECB77836FEB99B /* Pods-HypeSocialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocialTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocialTests/Pods-HypeSocialTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +77,6 @@
 				57DFCF45218524670048F450 /* MSAL.framework in Frameworks */,
 				57DFCF3F21851F900048F450 /* Result.framework in Frameworks */,
 				57DFCF4121851F910048F450 /* RxSwift.framework in Frameworks */,
-				567121F55BDAB26496873410 /* Pods_HypeSocial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				125011479E9C65CF976E8643 /* Pods_HypeSocialTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +97,6 @@
 				57DFCEFB2185052D0048F450 /* HypeSocialTests */,
 				57DFCEE52185052B0048F450 /* Products */,
 				57DFCF30218516A40048F450 /* Frameworks */,
-				FD865A278809C8D5459EF752 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,21 +167,8 @@
 				57DFCF3621851F8B0048F450 /* Moya.framework */,
 				57DFCF3A21851F8C0048F450 /* Result.framework */,
 				57DFCF3B21851F8C0048F450 /* RxSwift.framework */,
-				4A46C070C6EF537D066D4E08 /* Pods_HypeSocial.framework */,
-				C2C39DB3EB8D41D58E3D22EA /* Pods_HypeSocialTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FD865A278809C8D5459EF752 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3BBDCBF47C3E1B1A35017BF5 /* Pods-HypeSocial.debug.xcconfig */,
-				48D07DD30A029B717A1297DF /* Pods-HypeSocial.release.xcconfig */,
-				FE04D0DCFBECB77836FEB99B /* Pods-HypeSocialTests.debug.xcconfig */,
-				F4C77F8B65E1B80739FA62E7 /* Pods-HypeSocialTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,13 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57DFCF012185052E0048F450 /* Build configuration list for PBXNativeTarget "HypeSocial" */;
 			buildPhases = (
-				1BBEFC72FB173C4B99DFCF23 /* [CP] Check Pods Manifest.lock */,
 				57DFCF0921850E120048F450 /* Carthage */,
 				57DFCF0821850DFD0048F450 /* Carthage */,
 				57DFCEE02185052B0048F450 /* Sources */,
 				57DFCEE12185052B0048F450 /* Frameworks */,
 				57DFCEE22185052B0048F450 /* Resources */,
-				B248EBB0AD136696415734A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -223,7 +197,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57DFCF042185052E0048F450 /* Build configuration list for PBXNativeTarget "HypeSocialTests" */;
 			buildPhases = (
-				0BF3CEDC9AC01B7607F3822A /* [CP] Check Pods Manifest.lock */,
 				57DFCEF42185052D0048F450 /* Sources */,
 				57DFCEF52185052D0048F450 /* Frameworks */,
 				57DFCEF62185052D0048F450 /* Resources */,
@@ -302,50 +275,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0BF3CEDC9AC01B7607F3822A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HypeSocialTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1BBEFC72FB173C4B99DFCF23 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HypeSocial-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		57DFCF0921850E120048F450 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,30 +294,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		B248EBB0AD136696415734A5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
-				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -559,7 +464,6 @@
 		};
 		57DFCF022185052E0048F450 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3BBDCBF47C3E1B1A35017BF5 /* Pods-HypeSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HypeSocial/HypeSocial.entitlements;
@@ -584,7 +488,6 @@
 		};
 		57DFCF032185052E0048F450 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48D07DD30A029B717A1297DF /* Pods-HypeSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HypeSocial/HypeSocial.entitlements;
@@ -608,7 +511,6 @@
 		};
 		57DFCF052185052E0048F450 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE04D0DCFBECB77836FEB99B /* Pods-HypeSocialTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -630,7 +532,6 @@
 		};
 		57DFCF062185052E0048F450 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4C77F8B65E1B80739FA62E7 /* Pods-HypeSocialTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
