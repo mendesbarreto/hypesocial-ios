@@ -1,2 +1,3 @@
 github "Moya/Moya"
 github "AzureAD/microsoft-authentication-library-for-objc" "master"
+github "Ramotion/folding-cell"
