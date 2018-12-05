@@ -1,27 +1,20 @@
-import UIKit
+//
+// Created by Douglas Mendes on 2018-12-04.
+// Copyright (c) 2018 Douglas Mendes. All rights reserved.
+//
+
 import MSAL
 
-struct Application {
-    static let clientID = "16c34857-fd53-447b-846a-fee84c368aaa"
-    static let graphURI = "https://graph.microsoft.com/v1.0/me/"
-    static let scopes: [String] = ["https://graph.microsoft.com/user.read", "https://graph.microsoft.com/contacts.read"]
-    static let authority = "https://login.microsoftonline.com/common"
-}
-
-final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDelegate {
-
+final class TempServiceMSAL {
     private var accessToken: String = ""
     private var idToken: String = ""
     private var applicationContext : MSALPublicClientApplication?
 
-    @IBOutlet private weak var loggingText: UITextView!
-    @IBOutlet private weak var signoutButton: UIButton!
+    var isLoggedIn: Bool {
+        return !accessToken.isEmpty
+    }
 
-    /**
-        Setup public client application in viewDidLoad
-    */
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func start() {
         do {
             guard let authorityURL = URL(string: Application.authority) else {
                 updateLogging(text: "Unable to create authority URL")
@@ -33,19 +26,6 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
 
         } catch let error {
             updateLogging(text: "Unable to create Application Context \(error)")
-        }
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateSignoutButton(enabled: !accessToken.isEmpty)
-    }
-
-    @IBAction func callGraphButton(_ sender: UIButton) {
-        if currentAccount() == nil {
-            acquireTokenInteractively()
-        } else {
-            acquireTokenSilently()
         }
     }
 
@@ -68,21 +48,12 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
                 strongSelf.updateLogging(text: "Could not acquire token: No result returned")
                 return
             }
-            
+
             strongSelf.accessToken = result.accessToken
             strongSelf.updateLogging(text: "Access token is \(strongSelf.accessToken)")
-            strongSelf.updateSignoutButton(enabled: true)
+            //strongSelf.updateSignoutButton(enabled: true)
             strongSelf.getContentWithToken()
         }
-    }
-
-    func updateSignoutButton(enabled: Bool) {
-        signoutButton.isEnabled = enabled
-    }
-
-    func updateLogging(text: String) {
-        loggingText.text += "\(text)\n"
-        print("\(text)\n")
     }
 
     func acquireTokenSilently() {
@@ -119,7 +90,7 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
                 strongSelf.idToken = result.idToken!
                 strongSelf.accessToken = result.accessToken
                 strongSelf.updateLogging(text: "Refreshed Access token is \(strongSelf.accessToken)")
-                strongSelf.updateSignoutButton(enabled: true)
+                //strongSelf.updateSignoutButton(enabled: true)
                 strongSelf.getContentWithToken()
                 strongSelf.updateLogging(text: "\n\n \(strongSelf.idToken)")
             }
@@ -167,16 +138,20 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
         }.resume()
     }
 
-    @IBAction func signoutButton(_ sender: UIButton) {
+    func updateLogging(text: String) {
+        //loggingText.text += "\(text)\n"
+        print("\(text)\n")
+    }
+
+    func signout() {
         guard let applicationContext = self.applicationContext else { return }
         guard let account = self.currentAccount() else { return }
-        
+
         do {
             try applicationContext.remove(account)
-            loggingText.text = ""
-            updateSignoutButton(enabled: false)
         } catch {
             self.updateLogging(text: "Received error signing account out: \(error)")
         }
     }
+
 }
