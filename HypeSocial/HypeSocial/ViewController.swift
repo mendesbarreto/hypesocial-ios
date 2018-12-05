@@ -23,7 +23,6 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
-            UIView.animate(withDuration: <#T##TimeInterval##Foundation.TimeInterval#>, animations: <#T##@escaping () -> Void##@escaping () -> Swift.Void#>)
             guard let authorityURL = URL(string: Application.authority) else {
                 updateLogging(text: "Unable to create authority URL")
                 return
@@ -69,9 +68,8 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
                 strongSelf.updateLogging(text: "Could not acquire token: No result returned")
                 return
             }
-
-            print(result.accessToken!)
-            strongSelf.accessToken = result.accessToken!
+            
+            strongSelf.accessToken = result.accessToken
             strongSelf.updateLogging(text: "Access token is \(strongSelf.accessToken)")
             strongSelf.updateSignoutButton(enabled: true)
             strongSelf.getContentWithToken()
@@ -88,8 +86,9 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
     }
 
     func acquireTokenSilently() {
-        guard let applicationContext = self.applicationContext else { return }
-        applicationContext.acquireTokenSilent(forScopes: Application.scopes, account: currentAccount()) { [weak self] (result, error) in
+        guard let applicationContext = applicationContext else { return }
+        guard let currentAccount = currentAccount() else { return }
+        applicationContext.acquireTokenSilent(forScopes: Application.scopes, account: currentAccount) { [weak self] (result, error) in
             guard let strongSelf = self else { return }
 
             if let error = error {
@@ -117,8 +116,8 @@ final class ViewController: UIViewController, UITextFieldDelegate, URLSessionDel
             }
 
             DispatchQueue.main.async {
-                strongSelf.idToken = result.idToken
-                strongSelf.accessToken = result.accessToken!
+                strongSelf.idToken = result.idToken!
+                strongSelf.accessToken = result.accessToken
                 strongSelf.updateLogging(text: "Refreshed Access token is \(strongSelf.accessToken)")
                 strongSelf.updateSignoutButton(enabled: true)
                 strongSelf.getContentWithToken()

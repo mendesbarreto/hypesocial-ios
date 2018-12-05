@@ -6,6 +6,10 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIcons</key>
+	<dict/>
+	<key>CFBundleIcons~ipad</key>
+	<dict/>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -16,6 +20,19 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>msal16c34857-fd53-447b-846a-fee84c368aaa</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -38,19 +55,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>CFBundleURLTypes</key>
-	<array>
-	    <dict>
-	        <key>CFBundleTypeRole</key>
-	        <string>Editor</string>
-	        <key>CFBundleURLName</key>
-	        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-	        <key>CFBundleURLSchemes</key>
-	        <array>
-	            <string>msal16c34857-fd53-447b-846a-fee84c368aaa</string>
-	        </array>
-	    </dict>
 	</array>
 </dict>
 </plist>

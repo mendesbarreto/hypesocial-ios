@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		579AC91121B771A700BE46D5 /* FoldingCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579AC91021B771A700BE46D5 /* FoldingCell.framework */; };
 		57DFCEE82185052B0048F450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEE72185052B0048F450 /* AppDelegate.swift */; };
 		57DFCEEA2185052B0048F450 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEE92185052B0048F450 /* ViewController.swift */; };
 		57DFCEED2185052B0048F450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEB2185052B0048F450 /* Main.storyboard */; };
@@ -45,11 +46,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		579AC91021B771A700BE46D5 /* FoldingCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoldingCell.framework; path = Carthage/Build/iOS/FoldingCell.framework; sourceTree = "<group>"; };
 		57DFCEE42185052B0048F450 /* HypeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DFCEE72185052B0048F450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57DFCEE92185052B0048F450 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		57DFCEEC2185052B0048F450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		57DFCEEE2185052D0048F450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57DFCEEE2185052D0048F450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../SupportFile/Assets.xcassets; sourceTree = "<group>"; };
 		57DFCEF12185052D0048F450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57DFCEF32185052D0048F450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57DFCEF82185052D0048F450 /* HypeSocialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypeSocialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 				57DFCF3D21851F900048F450 /* Moya.framework in Frameworks */,
 				57DFCF45218524670048F450 /* MSAL.framework in Frameworks */,
 				57DFCF3F21851F900048F450 /* Result.framework in Frameworks */,
+				579AC91121B771A700BE46D5 /* FoldingCell.framework in Frameworks */,
 				57DFCF4121851F910048F450 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +147,7 @@
 		57DFCF0B21850F950048F450 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				57DFCEEE2185052D0048F450 /* Assets.xcassets */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -152,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				57DFCF0F2185125D0048F450 /* CartageOutputDependencies.xcfilelist */,
-				57DFCEEE2185052D0048F450 /* Assets.xcassets */,
 				57DFCF0D218510910048F450 /* CartageInputDependencies.xcfilelist */,
 			);
 			path = SupportFile;
@@ -161,6 +164,7 @@
 		57DFCF30218516A40048F450 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				579AC91021B771A700BE46D5 /* FoldingCell.framework */,
 				57DFCF44218524670048F450 /* MSAL.framework */,
 				57DFCF422185210D0048F450 /* RxMoya.framework */,
 				57DFCF3921851F8C0048F450 /* Alamofire.framework */,
