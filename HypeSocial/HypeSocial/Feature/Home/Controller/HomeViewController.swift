@@ -7,6 +7,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, URLSessio
     @IBOutlet private weak var signoutButton: UIButton!
 
     private let tempServiceMSAL = TempServiceMSAL()
+    private let tableView = UITableView()
 
     /**
         Setup public client application in viewDidLoad
@@ -14,6 +15,9 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, URLSessio
     override func viewDidLoad() {
         super.viewDidLoad()
         tempServiceMSAL.start()
+
+        view.addSubview(tableView)      
+        tableView.anchorToFit(in: view)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -37,3 +41,4 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, URLSessio
         tempServiceMSAL.signout()
     }
 }
+

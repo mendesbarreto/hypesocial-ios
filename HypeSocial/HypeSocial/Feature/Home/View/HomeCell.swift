@@ -7,24 +7,44 @@ import UIKit
 import FoldingCell
 
 final class HomeCell: FoldingCell {
+
     private let rotatedView = RotatedView()
-    private let textView = RotatedView()
+    private let textView = UIView()
 
     override init(style: CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         foregroundView = rotatedView
         contentView.addSubview(rotatedView)
+        contentView.addSubview(textView)
+
         rotatedView
                 .startAnchor()
-                .topAnchor(to: contentView, constant: 8)
                 .leadingAnchor(to: contentView, constant: 8)
                 .trailingAnchor(to: contentView, constant: -8)
                 .heightAnchor(constant: 75)
 
-        textView = 
+        let rotatedViewConstraint = rotatedView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 8)
+        rotatedViewConstraint.isActive = true
+        foregroundViewTop = rotatedViewConstraint
+
+        textView.startAnchor()
+                .leadingAnchor(to: contentView, constant: 8)
+                .trailingAnchor(to: contentView, constant: -8)
+                .heightAnchor(constant: 456)
+
+        let textViewConstraint = rotatedView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 8)
+        textViewConstraint.isActive = true
+
+        containerViewTop = textViewConstraint
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError()
+    }
+
+    override func animationDuration(itemIndex:NSInteger, type:AnimationType) -> TimeInterval {
+        // durations count equal it itemCount
+        let durations = [0.33, 0.26, 0.26] // timing animation for each view
+        return durations[itemIndex]
     }
 }
