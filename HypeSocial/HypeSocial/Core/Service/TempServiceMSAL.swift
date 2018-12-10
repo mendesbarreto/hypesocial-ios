@@ -154,8 +154,6 @@ final class TempServiceMSAL {
     }
 
     func signout() {
-        UserDefaults.standard.removeObject(forKey: "MSALCurrentAccountIdentifier")
-
         guard let applicationContext = self.applicationContext else { return }
         guard let account = self.currentAccount() else { return }
 
@@ -165,5 +163,4 @@ final class TempServiceMSAL {
             self.updateLogging(text: "Received error signing account out: \(error)")
         }
     }
-
 }

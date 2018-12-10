@@ -11,7 +11,6 @@ extension EventListViewController: UITableViewDelegate {
     }
 }
 
-
 final class EventListDataSource: NSObject, UITableViewDataSource {
 
     unowned var tempViewController: EventListViewController
@@ -45,7 +44,7 @@ final class EventListViewController: UIViewController {
                 icon: UIImage(named: "event-icon")!,
                 title: "Welcome \nto \nLevio Events !",
                 itemTitle: "Noel Party",
-                itemSubtitle: "This will be a great event",
+                itemSubtitle: "This will be a great event =)",
                 textColor: .white,
                 hasParallax: false,
                 eventDetailViewController: eventDetailViewController,
