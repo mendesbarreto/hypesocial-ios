@@ -1,7 +1,7 @@
 github "Alamofire/Alamofire" "4.8.0"
 github "AzureAD/microsoft-authentication-library-for-objc" "7294d2a9865da914338456366b642c009e9695fc"
 github "Moya/Moya" "12.0.1"
-github "Ramotion/folding-cell" "4.0.2"
 github "ReactiveCocoa/ReactiveSwift" "4.0.0"
 github "ReactiveX/RxSwift" "4.4.0"
+github "SnapKit/SnapKit" "4.2.0"
 github "antitypical/Result" "4.0.0"

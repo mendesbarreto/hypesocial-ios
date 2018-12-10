@@ -1,23 +1,38 @@
 import UIKit
 import MSAL
+import SnapKit
+
+extension HomeViewController: TempServiceMSALDelegate {
+    func onSignIn() {
+        DispatchQueue.main.async { [weak self] in
+            guard let navigationController = self?.navigationController else { return }
+
+            let eventListViewController = UIStoryboard(name: "Main", bundle: nil)
+                    .instantiateViewController(withIdentifier: String(describing: EventListViewController.self))
+            navigationController.pushViewController(eventListViewController, animated: true)
+        }
+    }
+
+    func onSignOut() {
+    }
+
+    func onError() {
+    }
+}
+
 
 final class HomeViewController: UIViewController, UITextFieldDelegate, URLSessionDelegate {
 
-    @IBOutlet private weak var loggingText: UITextView!
-    @IBOutlet private weak var signoutButton: UIButton!
-
     private let tempServiceMSAL = TempServiceMSAL()
-    private let tableView = UITableView()
 
     /**
         Setup public client application in viewDidLoad
     */
     override func viewDidLoad() {
         super.viewDidLoad()
+        tempServiceMSAL.delegate = self
         tempServiceMSAL.start()
-
-        view.addSubview(tableView)      
-        tableView.anchorToFit(in: view)
+        tempServiceMSAL.signout()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +49,7 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, URLSessio
     }
 
     func updateSignoutButton(enabled: Bool) {
-        signoutButton.isEnabled = enabled
+        //signoutButton.isEnabled = enabled
     }
 
     @IBAction func signoutButton(_ sender: UIButton) {

@@ -5,10 +5,18 @@
 
 import MSAL
 
+protocol TempServiceMSALDelegate: class {
+    func onSignIn()
+    func onSignOut()
+    func onError()
+}
+
 final class TempServiceMSAL {
     private var accessToken: String = ""
     private var idToken: String = ""
     private var applicationContext : MSALPublicClientApplication?
+
+    weak var delegate: TempServiceMSALDelegate? = nil
 
     var isLoggedIn: Bool {
         return !accessToken.isEmpty
@@ -41,17 +49,18 @@ final class TempServiceMSAL {
             if let error = error {
                 print(error as NSError)
                 strongSelf.updateLogging(text: "Could not acquire token: \(error)")
+                strongSelf.delegate?.onError()
                 return
             }
 
             guard let result = result else {
                 strongSelf.updateLogging(text: "Could not acquire token: No result returned")
+                strongSelf.delegate?.onError()
                 return
             }
 
             strongSelf.accessToken = result.accessToken
             strongSelf.updateLogging(text: "Access token is \(strongSelf.accessToken)")
-            //strongSelf.updateSignoutButton(enabled: true)
             strongSelf.getContentWithToken()
         }
     }
@@ -72,6 +81,7 @@ final class TempServiceMSAL {
                     }
                 } else {
                     DispatchQueue.main.async {
+                        strongSelf.delegate?.onError()
                         strongSelf.updateLogging(text: "Could not acquire token silently: \(error)")
                     }
                 }
@@ -82,6 +92,7 @@ final class TempServiceMSAL {
             guard let result = result else {
                 DispatchQueue.main.async {
                     strongSelf.updateLogging(text: "Could not acquire token: No result returned")
+                    strongSelf.delegate?.onError()
                 }
                 return
             }
@@ -90,7 +101,6 @@ final class TempServiceMSAL {
                 strongSelf.idToken = result.idToken!
                 strongSelf.accessToken = result.accessToken
                 strongSelf.updateLogging(text: "Refreshed Access token is \(strongSelf.accessToken)")
-                //strongSelf.updateSignoutButton(enabled: true)
                 strongSelf.getContentWithToken()
                 strongSelf.updateLogging(text: "\n\n \(strongSelf.idToken)")
             }
@@ -118,6 +128,7 @@ final class TempServiceMSAL {
         let url = URL(string: Application.graphURI)
         print("Bearer \(self.accessToken)")
         var request = URLRequest(url: url!)
+
         request.setValue("Bearer \(self.accessToken)", forHTTPHeaderField: "Authorization")
         URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
             guard let strongSelf = self else { return }
@@ -134,16 +145,17 @@ final class TempServiceMSAL {
             }
 
             strongSelf.updateLogging(text: "Result from Graph: \(result))")
-
+            strongSelf.delegate?.onSignIn()
         }.resume()
     }
 
     func updateLogging(text: String) {
-        //loggingText.text += "\(text)\n"
         print("\(text)\n")
     }
 
     func signout() {
+        UserDefaults.standard.removeObject(forKey: "MSALCurrentAccountIdentifier")
+
         guard let applicationContext = self.applicationContext else { return }
         guard let account = self.currentAccount() else { return }
 

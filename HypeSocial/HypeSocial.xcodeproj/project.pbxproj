@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		132080C5F0B2A84855F08D9B /* TempServiceMSAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208D02BD8F371A2BA776B2 /* TempServiceMSAL.swift */; };
+		132081B1E052BEBC2F0FC848 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208E1F36BD6635ACDB0596 /* EventListViewController.swift */; };
+		13208361DD6C999C856365D8 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208484DEAAF2EA757D9C68 /* UIColor.swift */; };
 		1320860E32342A89629012E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132089CF91BC36B3424F2C4A /* HomeViewController.swift */; };
 		1320865100C2083A93C55EF5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132085B21FB3CC6C92A33FEB /* HomeCell.swift */; };
-		132086813BE19354AE1314E9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208C77506508FB862CADD4 /* UIView.swift */; };
-		579AC91121B771A700BE46D5 /* FoldingCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579AC91021B771A700BE46D5 /* FoldingCell.framework */; };
+		132088D90A545A8A9FFCAE11 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132080B43B5054687EDFFB41 /* UITableViewCell.swift */; };
+		132088DC5BEA3F9071867046 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208F0152537F73CADF10B0 /* EventDetailViewController.swift */; };
+		2C6715A830AC25D3893F10E8 /* Pods_HypeSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B8E3C919E3D7C2F3F807C /* Pods_HypeSocial.framework */; };
 		579AC91B21B777FE00BE46D5 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579AC91A21B777FE00BE46D5 /* AppConfig.swift */; };
 		57DFCEE82185052B0048F450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEE72185052B0048F450 /* AppDelegate.swift */; };
 		57DFCEED2185052B0048F450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEB2185052B0048F450 /* Main.storyboard */; };
@@ -24,6 +27,7 @@
 		57DFCF4121851F910048F450 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF3B21851F8C0048F450 /* RxSwift.framework */; };
 		57DFCF432185210D0048F450 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF422185210D0048F450 /* RxMoya.framework */; };
 		57DFCF45218524670048F450 /* MSAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57DFCF44218524670048F450 /* MSAL.framework */; };
+		8A60F6236A5FAA683AD2D2B4 /* Pods_HypeSocialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD12E2C7FF96ED9D4D4B65E /* Pods_HypeSocialTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +54,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		132080B43B5054687EDFFB41 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		13208484DEAAF2EA757D9C68 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		132085B21FB3CC6C92A33FEB /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		132089CF91BC36B3424F2C4A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		13208C77506508FB862CADD4 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		13208D02BD8F371A2BA776B2 /* TempServiceMSAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempServiceMSAL.swift; sourceTree = "<group>"; };
-		579AC91021B771A700BE46D5 /* FoldingCell.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FoldingCell.framework; path = Carthage/Build/iOS/FoldingCell.framework; sourceTree = "<group>"; };
+		13208E1F36BD6635ACDB0596 /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		13208F0152537F73CADF10B0 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		1FE3FD10727D9CDABD9A5BD6 /* Pods-HypeSocialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocialTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocialTests/Pods-HypeSocialTests.release.xcconfig"; sourceTree = "<group>"; };
+		4162FF28DAE0C6C5667A82FA /* Pods-HypeSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial.release.xcconfig"; sourceTree = "<group>"; };
 		579AC91A21B777FE00BE46D5 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		57DFCEE42185052B0048F450 /* HypeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DFCEE72185052B0048F450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +82,10 @@
 		57DFCF422185210D0048F450 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
 		57DFCF44218524670048F450 /* MSAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MSAL.framework; path = Carthage/Build/iOS/MSAL.framework; sourceTree = "<group>"; };
 		57DFCF4C218632F10048F450 /* HypeSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HypeSocial.entitlements; sourceTree = "<group>"; };
+		5D041B664238138F557E1DDD /* Pods-HypeSocialTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocialTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocialTests/Pods-HypeSocialTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C90B8E3C919E3D7C2F3F807C /* Pods_HypeSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HypeSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD12E2C7FF96ED9D4D4B65E /* Pods_HypeSocialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HypeSocialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF20B76543484CFBF229F3FE /* Pods-HypeSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +98,8 @@
 				57DFCF3D21851F900048F450 /* Moya.framework in Frameworks */,
 				57DFCF45218524670048F450 /* MSAL.framework in Frameworks */,
 				57DFCF3F21851F900048F450 /* Result.framework in Frameworks */,
-				579AC91121B771A700BE46D5 /* FoldingCell.framework in Frameworks */,
 				57DFCF4121851F910048F450 /* RxSwift.framework in Frameworks */,
+				2C6715A830AC25D3893F10E8 /* Pods_HypeSocial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A60F6236A5FAA683AD2D2B4 /* Pods_HypeSocialTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				132089CF91BC36B3424F2C4A /* HomeViewController.swift */,
+				13208F0152537F73CADF10B0 /* EventDetailViewController.swift */,
+				13208E1F36BD6635ACDB0596 /* EventListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,7 +135,8 @@
 		13208B1B2AF2AC1D47D910B1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				13208C77506508FB862CADD4 /* UIView.swift */,
+				132080B43B5054687EDFFB41 /* UITableViewCell.swift */,
+				13208484DEAAF2EA757D9C68 /* UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -175,6 +191,7 @@
 				57DFCEFB2185052D0048F450 /* HypeSocialTests */,
 				57DFCEE52185052B0048F450 /* Products */,
 				57DFCF30218516A40048F450 /* Frameworks */,
+				88FDB0CF6E56C3D0557404EA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,15 +257,27 @@
 		57DFCF30218516A40048F450 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				579AC91021B771A700BE46D5 /* FoldingCell.framework */,
 				57DFCF44218524670048F450 /* MSAL.framework */,
 				57DFCF422185210D0048F450 /* RxMoya.framework */,
 				57DFCF3921851F8C0048F450 /* Alamofire.framework */,
 				57DFCF3621851F8B0048F450 /* Moya.framework */,
 				57DFCF3A21851F8C0048F450 /* Result.framework */,
 				57DFCF3B21851F8C0048F450 /* RxSwift.framework */,
+				C90B8E3C919E3D7C2F3F807C /* Pods_HypeSocial.framework */,
+				DAD12E2C7FF96ED9D4D4B65E /* Pods_HypeSocialTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88FDB0CF6E56C3D0557404EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF20B76543484CFBF229F3FE /* Pods-HypeSocial.debug.xcconfig */,
+				4162FF28DAE0C6C5667A82FA /* Pods-HypeSocial.release.xcconfig */,
+				5D041B664238138F557E1DDD /* Pods-HypeSocialTests.debug.xcconfig */,
+				1FE3FD10727D9CDABD9A5BD6 /* Pods-HypeSocialTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,11 +287,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57DFCF012185052E0048F450 /* Build configuration list for PBXNativeTarget "HypeSocial" */;
 			buildPhases = (
+				BF13160AEA1742F5DAC98A6C /* [CP] Check Pods Manifest.lock */,
 				57DFCF0921850E120048F450 /* Carthage */,
 				57DFCF0821850DFD0048F450 /* Carthage */,
 				57DFCEE02185052B0048F450 /* Sources */,
 				57DFCEE12185052B0048F450 /* Frameworks */,
 				57DFCEE22185052B0048F450 /* Resources */,
+				9DA39EBF8A661DB43F592905 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,6 +308,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 57DFCF042185052E0048F450 /* Build configuration list for PBXNativeTarget "HypeSocialTests" */;
 			buildPhases = (
+				95A6F6C2256511EB2E3BE27A /* [CP] Check Pods Manifest.lock */,
 				57DFCEF42185052D0048F450 /* Sources */,
 				57DFCEF52185052D0048F450 /* Frameworks */,
 				57DFCEF62185052D0048F450 /* Resources */,
@@ -375,6 +407,74 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		95A6F6C2256511EB2E3BE27A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HypeSocialTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DA39EBF8A661DB43F592905 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
+				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF13160AEA1742F5DAC98A6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HypeSocial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -387,7 +487,10 @@
 				132080C5F0B2A84855F08D9B /* TempServiceMSAL.swift in Sources */,
 				1320860E32342A89629012E3 /* HomeViewController.swift in Sources */,
 				1320865100C2083A93C55EF5 /* HomeCell.swift in Sources */,
-				132086813BE19354AE1314E9 /* UIView.swift in Sources */,
+				132088D90A545A8A9FFCAE11 /* UITableViewCell.swift in Sources */,
+				13208361DD6C999C856365D8 /* UIColor.swift in Sources */,
+				132088DC5BEA3F9071867046 /* EventDetailViewController.swift in Sources */,
+				132081B1E052BEBC2F0FC848 /* EventListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +651,7 @@
 		};
 		57DFCF022185052E0048F450 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF20B76543484CFBF229F3FE /* Pods-HypeSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HypeSocial/HypeSocial.entitlements;
@@ -572,6 +676,7 @@
 		};
 		57DFCF032185052E0048F450 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4162FF28DAE0C6C5667A82FA /* Pods-HypeSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HypeSocial/HypeSocial.entitlements;
@@ -595,6 +700,7 @@
 		};
 		57DFCF052185052E0048F450 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D041B664238138F557E1DDD /* Pods-HypeSocialTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -616,6 +722,7 @@
 		};
 		57DFCF062185052E0048F450 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FE3FD10727D9CDABD9A5BD6 /* Pods-HypeSocialTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

@@ -4,47 +4,97 @@
 //
 
 import UIKit
-import FoldingCell
+import Cards
+import SnapKit
 
-final class HomeCell: FoldingCell {
+struct HomeCardViewModel {
+    let backgroundColor: UIColor
+    let icon: UIImage
+    let title: String
+    let itemTitle: String
+    let itemSubtitle: String
+    let textColor: UIColor
+    let hasParallax: Bool
+    let eventDetailViewController: UIViewController
+    let fromViewController: UIViewController
+}
 
-    private let rotatedView = RotatedView()
-    private let textView = UIView()
+extension CardHighlight {
+    func bindTo(viewModel: HomeCardViewModel) {
+        backgroundColor = viewModel.backgroundColor
+        icon = viewModel.icon
+        title = viewModel.title
+        itemTitle = viewModel.itemTitle
+        itemSubtitle = viewModel.itemSubtitle
+        textColor = viewModel.textColor
+        hasParallax = viewModel.hasParallax
+
+        shouldPresent(
+                viewModel.eventDetailViewController,
+                from: viewModel.fromViewController,
+                fullscreen: true)
+    }
+
+}
+
+final class HomeViewCell: UITableViewCell {
+
+    private var cardView = CardHighlight(frame: .zero)
 
     override init(style: CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        foregroundView = rotatedView
-        contentView.addSubview(rotatedView)
-        contentView.addSubview(textView)
-
-        rotatedView
-                .startAnchor()
-                .leadingAnchor(to: contentView, constant: 8)
-                .trailingAnchor(to: contentView, constant: -8)
-                .heightAnchor(constant: 75)
-
-        let rotatedViewConstraint = rotatedView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 8)
-        rotatedViewConstraint.isActive = true
-        foregroundViewTop = rotatedViewConstraint
-
-        textView.startAnchor()
-                .leadingAnchor(to: contentView, constant: 8)
-                .trailingAnchor(to: contentView, constant: -8)
-                .heightAnchor(constant: 456)
-
-        let textViewConstraint = rotatedView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 8)
-        textViewConstraint.isActive = true
-
-        containerViewTop = textViewConstraint
+        createConstraints()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
 
-    override func animationDuration(itemIndex:NSInteger, type:AnimationType) -> TimeInterval {
-        // durations count equal it itemCount
-        let durations = [0.33, 0.26, 0.26] // timing animation for each view
-        return durations[itemIndex]
+
+    func bindTo(viewModel: HomeCardViewModel) {
+        cardView.bindTo(viewModel: viewModel)
+    }
+}
+
+extension HomeViewCell {
+    func createConstraints() {
+        contentView.addSubview(cardView)
+        cardView.snp.makeConstraints { maker in
+            maker.leading.equalToSuperview().offset(10)
+            maker.trailing.equalToSuperview().offset(-10)
+            maker.bottom.equalToSuperview().offset(-10)
+            maker.top.equalToSuperview().offset(10)
+        }
+    }
+}
+
+final class HomeView: UIView {
+
+    private var cardView = CardHighlight(frame: .zero)
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        createConstraints()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError()
+    }
+
+
+    func bindTo(viewModel: HomeCardViewModel) {
+        cardView.bindTo(viewModel: viewModel)
+    }
+}
+
+extension HomeView {
+    func createConstraints() {
+        addSubview(cardView)
+        cardView.snp.makeConstraints { maker in
+            maker.leading.equalToSuperview().offset(10)
+            maker.trailing.equalToSuperview().offset(-10)
+            maker.bottom.equalToSuperview().offset(-10)
+            maker.top.equalToSuperview().offset(10)
+        }
     }
 }
