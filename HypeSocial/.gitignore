@@ -8,6 +8,9 @@
 #Carthage
 Carthage/
 
+#CocoaPods
+Pods/
+
 #Mac Folder
 ../.DS_Store
 .DS_Store

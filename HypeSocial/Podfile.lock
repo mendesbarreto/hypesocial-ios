@@ -1,0 +1,28 @@
+PODS:
+  - Cards (1.3.4):
+    - Player (= 0.12)
+  - Player (0.12.0)
+
+DEPENDENCIES:
+  - "Cards (from `git@github.com:dimkoy/Cards.git`)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Player
+
+EXTERNAL SOURCES:
+  Cards:
+    :git: "git@github.com:dimkoy/Cards.git"
+
+CHECKOUT OPTIONS:
+  Cards:
+    :commit: a057fe3f8dc7af131598327e7e3e16a6d291a976
+    :git: "git@github.com:dimkoy/Cards.git"
+
+SPEC CHECKSUMS:
+  Cards: 82ca80268a39b9edaa2f96d1dd9d5b4bc4cbc344
+  Player: b5bf7d5533287e83289bde4809627a02df88142c
+
+PODFILE CHECKSUM: 62e0c7d59fce960fc9c963ec890662e60e030860
+
+COCOAPODS: 1.5.3
