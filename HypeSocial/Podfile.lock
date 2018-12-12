@@ -6,6 +6,9 @@ PODS:
     - FirebaseAnalytics (= 5.3.0)
   - Firebase/CoreOnly (5.13.0):
     - FirebaseCore (= 5.1.8)
+  - Firebase/Messaging (5.13.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.2.1)
   - FirebaseAnalytics (5.3.0):
     - FirebaseCore (~> 5.1)
     - FirebaseInstanceID (~> 3.3)
@@ -15,12 +18,20 @@ PODS:
     - GoogleUtilities/Network (~> 5.2)
     - "GoogleUtilities/NSData+zlib (~> 5.2)"
     - nanopb (~> 0.3)
+  - FirebaseAnalyticsInterop (1.1.0)
   - FirebaseCore (5.1.8):
     - GoogleUtilities/Logger (~> 5.2)
   - FirebaseInstanceID (3.3.0):
     - FirebaseCore (~> 5.1)
     - GoogleUtilities/Environment (~> 5.3)
     - GoogleUtilities/UserDefaults (~> 5.3)
+  - FirebaseMessaging (3.2.1):
+    - FirebaseAnalyticsInterop (~> 1.1)
+    - FirebaseCore (~> 5.1)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/Reachability (~> 5.2)
+    - Protobuf (~> 3.1)
   - GoogleAppMeasurement (5.3.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 5.2)
     - GoogleUtilities/MethodSwizzler (~> 5.2)
@@ -51,21 +62,26 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Player (0.12.0)
+  - Protobuf (3.6.1)
 
 DEPENDENCIES:
   - "Cards (from `git@github.com:dimkoy/Cards.git`)"
   - Firebase/Core
+  - Firebase/Messaging
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Firebase
     - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
     - FirebaseCore
     - FirebaseInstanceID
+    - FirebaseMessaging
     - GoogleAppMeasurement
     - GoogleUtilities
     - nanopb
     - Player
+    - Protobuf
 
 EXTERNAL SOURCES:
   Cards:
@@ -80,13 +96,16 @@ SPEC CHECKSUMS:
   Cards: 82ca80268a39b9edaa2f96d1dd9d5b4bc4cbc344
   Firebase: 6df9a6114bc9f106a98fe83d5438d4d9833c2019
   FirebaseAnalytics: 63202d2665de4e6adcbdce189135255d8b5962ba
+  FirebaseAnalyticsInterop: e5f21be9af6548372e2f0815834ff909bff395a2
   FirebaseCore: fba2bfaa691c49028309b92e4dd37cc4b5512fbe
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
+  FirebaseMessaging: 0f14a264b0d7f867e8eff5d3556bc5d0d4e57888
   GoogleAppMeasurement: 5029d78f2b438bd30ffb44e6c558b57c21622727
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Player: b5bf7d5533287e83289bde4809627a02df88142c
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: fdb2a8f3391bc08c0f9035b20fe559d0c3e9b0ee
+PODFILE CHECKSUM: 40fad5f5d782cff071705cd3fca98376424c17b5
 
 COCOAPODS: 1.5.3

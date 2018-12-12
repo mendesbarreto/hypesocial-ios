@@ -6,6 +6,7 @@ target 'HypeSocial' do
   use_frameworks!
   pod 'Cards', :git => 'git@github.com:dimkoy/Cards.git'
   pod 'Firebase/Core'  
+  pod 'Firebase/Messaging'
 # Pods for HypeSocial
 
   target 'HypeSocialTests' do
