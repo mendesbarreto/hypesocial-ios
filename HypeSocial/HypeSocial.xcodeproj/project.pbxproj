@@ -16,6 +16,7 @@
 		132088DC5BEA3F9071867046 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208F0152537F73CADF10B0 /* EventDetailViewController.swift */; };
 		2C6715A830AC25D3893F10E8 /* Pods_HypeSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B8E3C919E3D7C2F3F807C /* Pods_HypeSocial.framework */; };
 		579AC91B21B777FE00BE46D5 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579AC91A21B777FE00BE46D5 /* AppConfig.swift */; };
+		57BB2CA021C1BE0700089756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57BB2C9F21C1BE0700089756 /* GoogleService-Info.plist */; };
 		57DFCEE82185052B0048F450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEE72185052B0048F450 /* AppDelegate.swift */; };
 		57DFCEED2185052B0048F450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEB2185052B0048F450 /* Main.storyboard */; };
 		57DFCEEF2185052D0048F450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEE2185052D0048F450 /* Assets.xcassets */; };
@@ -64,6 +65,7 @@
 		1FE3FD10727D9CDABD9A5BD6 /* Pods-HypeSocialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocialTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocialTests/Pods-HypeSocialTests.release.xcconfig"; sourceTree = "<group>"; };
 		4162FF28DAE0C6C5667A82FA /* Pods-HypeSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial.release.xcconfig"; sourceTree = "<group>"; };
 		579AC91A21B777FE00BE46D5 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		57BB2C9F21C1BE0700089756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		57DFCEE42185052B0048F450 /* HypeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DFCEE72185052B0048F450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57DFCEEC2185052B0048F450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 		57DFCF0C21850F9F0048F450 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				57BB2C9F21C1BE0700089756 /* GoogleService-Info.plist */,
 				57DFCF0F2185125D0048F450 /* CartageOutputDependencies.xcfilelist */,
 				57DFCF0D218510910048F450 /* CartageInputDependencies.xcfilelist */,
 			);
@@ -372,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DFCEF22185052D0048F450 /* LaunchScreen.storyboard in Resources */,
+				57BB2CA021C1BE0700089756 /* GoogleService-Info.plist in Resources */,
 				57DFCEEF2185052D0048F450 /* Assets.xcassets in Resources */,
 				57DFCEED2185052B0048F450 /* Main.storyboard in Resources */,
 			);
@@ -439,14 +443,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

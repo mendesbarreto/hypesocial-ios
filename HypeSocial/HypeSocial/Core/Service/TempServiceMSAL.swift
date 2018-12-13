@@ -139,7 +139,6 @@ final class TempServiceMSAL {
             }
 
             guard let result = try? JSONSerialization.jsonObject(with: data!, options: []) else {
-
                 strongSelf.updateLogging(text: "Couldn't deserialize result JSON")
                 return
             }
