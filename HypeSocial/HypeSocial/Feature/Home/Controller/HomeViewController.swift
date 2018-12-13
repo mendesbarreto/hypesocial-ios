@@ -7,7 +7,6 @@ extension HomeViewController: TempServiceMSALDelegate {
     func onSignIn() {
         DispatchQueue.main.async { [weak self] in
             guard let navigationController = self?.navigationController else { return }
-
             let eventListViewController = UIStoryboard(name: "Main", bundle: nil)
                     .instantiateViewController(withIdentifier: String(describing: EventListViewController.self))
             navigationController.pushViewController(eventListViewController, animated: true)
@@ -24,7 +23,7 @@ extension HomeViewController: TempServiceMSALDelegate {
 
 final class HomeViewController: UIViewController, UITextFieldDelegate, URLSessionDelegate {
 
-    private let tempServiceMSAL = TempServiceMSAL()
+    private let tempServiceMSAL = TempServiceMSAL.instance
 
     /**
         Setup public client application in viewDidLoad
@@ -32,12 +31,12 @@ final class HomeViewController: UIViewController, UITextFieldDelegate, URLSessio
     override func viewDidLoad() {
         super.viewDidLoad()
         tempServiceMSAL.delegate = self
-        tempServiceMSAL.start()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateSignoutButton(enabled: true)
+        tempServiceMSAL.start()
     }
 
 

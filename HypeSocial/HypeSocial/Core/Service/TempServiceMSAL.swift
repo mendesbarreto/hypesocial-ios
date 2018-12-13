@@ -16,10 +16,17 @@ final class TempServiceMSAL {
     private var idToken: String = ""
     private var applicationContext : MSALPublicClientApplication?
 
+    static let instance = TempServiceMSAL()
+
     weak var delegate: TempServiceMSALDelegate? = nil
 
+    var userName: String {
+        guard let userName = currentAccount()?.username else { return "" }
+        return userName
+    }
+
     var isLoggedIn: Bool {
-        return !accessToken.isEmpty
+        return !userName.isEmpty
     }
 
     func start() {
