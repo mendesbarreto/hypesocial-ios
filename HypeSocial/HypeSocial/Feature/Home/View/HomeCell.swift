@@ -29,10 +29,7 @@ extension CardHighlight {
         textColor = viewModel.textColor
         hasParallax = viewModel.hasParallax
 
-        shouldPresent(
-                viewModel.eventDetailViewController,
-                from: viewModel.fromViewController,
-                fullscreen: true)
+        delegate = viewModel.fromViewController as! EventListViewController
     }
 
 }
