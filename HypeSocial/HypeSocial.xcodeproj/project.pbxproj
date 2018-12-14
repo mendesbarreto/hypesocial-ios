@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		132080C5F0B2A84855F08D9B /* TempServiceMSAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208D02BD8F371A2BA776B2 /* TempServiceMSAL.swift */; };
 		132081B1E052BEBC2F0FC848 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208E1F36BD6635ACDB0596 /* EventListViewController.swift */; };
+		13208344AE4E5CC771811ED4 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132086652FF90BD2F686F93E /* RootViewController.swift */; };
 		13208361DD6C999C856365D8 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208484DEAAF2EA757D9C68 /* UIColor.swift */; };
+		1320843F5CFD847D2A7EF9A9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1320847DB5D49ED5C18EAD48 /* ProfileViewController.swift */; };
 		1320860E32342A89629012E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132089CF91BC36B3424F2C4A /* HomeViewController.swift */; };
 		1320865100C2083A93C55EF5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132085B21FB3CC6C92A33FEB /* HomeCell.swift */; };
 		132088D90A545A8A9FFCAE11 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132080B43B5054687EDFFB41 /* UITableViewCell.swift */; };
 		132088DC5BEA3F9071867046 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208F0152537F73CADF10B0 /* EventDetailViewController.swift */; };
 		2C6715A830AC25D3893F10E8 /* Pods_HypeSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B8E3C919E3D7C2F3F807C /* Pods_HypeSocial.framework */; };
+		5719C3D221C1EA8E00CB6961 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5719C3D021C1EA8E00CB6961 /* NVActivityIndicatorView.framework */; };
+		5719C3D321C1EA8E00CB6961 /* NVActivityIndicatorViewAppExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5719C3D121C1EA8E00CB6961 /* NVActivityIndicatorViewAppExtension.framework */; };
 		579AC91B21B777FE00BE46D5 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579AC91A21B777FE00BE46D5 /* AppConfig.swift */; };
+		57BB2CA021C1BE0700089756 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57BB2C9F21C1BE0700089756 /* GoogleService-Info.plist */; };
 		57DFCEE82185052B0048F450 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DFCEE72185052B0048F450 /* AppDelegate.swift */; };
 		57DFCEED2185052B0048F450 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEB2185052B0048F450 /* Main.storyboard */; };
 		57DFCEEF2185052D0048F450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DFCEEE2185052D0048F450 /* Assets.xcassets */; };
@@ -55,15 +60,20 @@
 
 /* Begin PBXFileReference section */
 		132080B43B5054687EDFFB41 /* UITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		1320847DB5D49ED5C18EAD48 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		13208484DEAAF2EA757D9C68 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		132085B21FB3CC6C92A33FEB /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		132086652FF90BD2F686F93E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		132089CF91BC36B3424F2C4A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13208D02BD8F371A2BA776B2 /* TempServiceMSAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempServiceMSAL.swift; sourceTree = "<group>"; };
 		13208E1F36BD6635ACDB0596 /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		13208F0152537F73CADF10B0 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		1FE3FD10727D9CDABD9A5BD6 /* Pods-HypeSocialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocialTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocialTests/Pods-HypeSocialTests.release.xcconfig"; sourceTree = "<group>"; };
 		4162FF28DAE0C6C5667A82FA /* Pods-HypeSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial.release.xcconfig"; sourceTree = "<group>"; };
+		5719C3D021C1EA8E00CB6961 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		5719C3D121C1EA8E00CB6961 /* NVActivityIndicatorViewAppExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorViewAppExtension.framework; path = Carthage/Build/iOS/NVActivityIndicatorViewAppExtension.framework; sourceTree = "<group>"; };
 		579AC91A21B777FE00BE46D5 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		57BB2C9F21C1BE0700089756 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		57DFCEE42185052B0048F450 /* HypeSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypeSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57DFCEE72185052B0048F450 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57DFCEEC2185052B0048F450 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +105,8 @@
 			files = (
 				57DFCF432185210D0048F450 /* RxMoya.framework in Frameworks */,
 				57DFCF3C21851F900048F450 /* Alamofire.framework in Frameworks */,
+				5719C3D221C1EA8E00CB6961 /* NVActivityIndicatorView.framework in Frameworks */,
+				5719C3D321C1EA8E00CB6961 /* NVActivityIndicatorViewAppExtension.framework in Frameworks */,
 				57DFCF3D21851F900048F450 /* Moya.framework in Frameworks */,
 				57DFCF45218524670048F450 /* MSAL.framework in Frameworks */,
 				57DFCF3F21851F900048F450 /* Result.framework in Frameworks */,
@@ -120,6 +132,7 @@
 				132089CF91BC36B3424F2C4A /* HomeViewController.swift */,
 				13208F0152537F73CADF10B0 /* EventDetailViewController.swift */,
 				13208E1F36BD6635ACDB0596 /* EventListViewController.swift */,
+				1320847DB5D49ED5C18EAD48 /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -162,6 +175,7 @@
 			children = (
 				1320823674CDBBB2DE3E3ADB /* Controller */,
 				1320897C88526DDA2B3EC964 /* View */,
+				132086652FF90BD2F686F93E /* RootViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -248,6 +262,7 @@
 		57DFCF0C21850F9F0048F450 /* SupportFile */ = {
 			isa = PBXGroup;
 			children = (
+				57BB2C9F21C1BE0700089756 /* GoogleService-Info.plist */,
 				57DFCF0F2185125D0048F450 /* CartageOutputDependencies.xcfilelist */,
 				57DFCF0D218510910048F450 /* CartageInputDependencies.xcfilelist */,
 			);
@@ -257,6 +272,8 @@
 		57DFCF30218516A40048F450 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5719C3D021C1EA8E00CB6961 /* NVActivityIndicatorView.framework */,
+				5719C3D121C1EA8E00CB6961 /* NVActivityIndicatorViewAppExtension.framework */,
 				57DFCF44218524670048F450 /* MSAL.framework */,
 				57DFCF422185210D0048F450 /* RxMoya.framework */,
 				57DFCF3921851F8C0048F450 /* Alamofire.framework */,
@@ -372,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57DFCEF22185052D0048F450 /* LaunchScreen.storyboard in Resources */,
+				57BB2CA021C1BE0700089756 /* GoogleService-Info.plist in Resources */,
 				57DFCEEF2185052D0048F450 /* Assets.xcassets in Resources */,
 				57DFCEED2185052B0048F450 /* Main.storyboard in Resources */,
 			);
@@ -439,14 +457,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Cards/Cards.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cards.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -491,6 +515,8 @@
 				13208361DD6C999C856365D8 /* UIColor.swift in Sources */,
 				132088DC5BEA3F9071867046 /* EventDetailViewController.swift in Sources */,
 				132081B1E052BEBC2F0FC848 /* EventListViewController.swift in Sources */,
+				1320843F5CFD847D2A7EF9A9 /* ProfileViewController.swift in Sources */,
+				13208344AE4E5CC771811ED4 /* RootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,3 +7,5 @@ $(SRCROOT)/Carthage/Build/iOS/RxMoya.framework
 $(SRCROOT)/Carthage/Build/iOS/RxSwift.framework
 $(SRCROOT)/Carthage/Build/iOS/MSAL.framework
 $(SRCROOT)/Carthage/Build/iOS/SnapKit.framework
+$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework
+$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorViewAppExtension.framework
