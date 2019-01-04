@@ -4,7 +4,7 @@
 target 'HypeSocial' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Cards', :git => 'git@github.com:dimkoy/Cards.git'
+  pod 'Cards'
   pod 'Firebase/Core'  
   pod 'Firebase/Messaging'
 # Pods for HypeSocial

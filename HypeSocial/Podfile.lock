@@ -1,6 +1,6 @@
 PODS:
-  - Cards (1.3.4):
-    - Player (= 0.12)
+  - Cards (1.3.5):
+    - Player (= 0.8.4)
   - Firebase/Core (5.13.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.3.0)
@@ -61,16 +61,17 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - Player (0.12.0)
+  - Player (0.8.4)
   - Protobuf (3.6.1)
 
 DEPENDENCIES:
-  - "Cards (from `git@github.com:dimkoy/Cards.git`)"
+  - Cards
   - Firebase/Core
   - Firebase/Messaging
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Cards
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
@@ -83,17 +84,8 @@ SPEC REPOS:
     - Player
     - Protobuf
 
-EXTERNAL SOURCES:
-  Cards:
-    :git: "git@github.com:dimkoy/Cards.git"
-
-CHECKOUT OPTIONS:
-  Cards:
-    :commit: a057fe3f8dc7af131598327e7e3e16a6d291a976
-    :git: "git@github.com:dimkoy/Cards.git"
-
 SPEC CHECKSUMS:
-  Cards: 82ca80268a39b9edaa2f96d1dd9d5b4bc4cbc344
+  Cards: 8dfaefcfb3464911ce8cec28e2fa83799793bd8a
   Firebase: 6df9a6114bc9f106a98fe83d5438d4d9833c2019
   FirebaseAnalytics: 63202d2665de4e6adcbdce189135255d8b5962ba
   FirebaseAnalyticsInterop: e5f21be9af6548372e2f0815834ff909bff395a2
@@ -103,9 +95,9 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 5029d78f2b438bd30ffb44e6c558b57c21622727
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  Player: b5bf7d5533287e83289bde4809627a02df88142c
+  Player: e45514e9e5fb8ff18f50eb2ba6f84dac9b6a0024
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 40fad5f5d782cff071705cd3fca98376424c17b5
+PODFILE CHECKSUM: 48a93107df8559ceb753ffc2731c5da63bcaa2c0
 
 COCOAPODS: 1.5.3
