@@ -4,9 +4,9 @@
 target 'HypeSocial' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Cards'
-  pod 'Firebase/Core'  
-  pod 'Firebase/Messaging'
+  pod 'Cards', '~> 1.3.5'
+  pod 'Firebase/Core', '~> 5.13.0'
+  pod 'Firebase/Messaging', '~> 5.13.0'
 # Pods for HypeSocial
 
   target 'HypeSocialTests' do
