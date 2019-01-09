@@ -17,6 +17,7 @@ final class RootViewController: UIViewController, NVActivityIndicatorViewable {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        view.backgroundColor = .blue
         let activityData = ActivityData(message: "Get Info from Outlook", type: .ballScaleRippleMultiple)
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData, nil)
         tempServiceMSAL.start()

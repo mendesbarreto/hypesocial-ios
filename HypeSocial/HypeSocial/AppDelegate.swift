@@ -15,37 +15,15 @@ import FirebaseMessaging
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow!
+
     let gcmMessageIDKey = "gcm.message_id"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         setupFirebaseWith(application: application)
-
-        MSALLogger.shared().setCallback { (logLevel, message, containsPII) in
-            if (!containsPII) {
-                print("%@", message!)
-            }
-        }
-
+        setupMainWindow()
+        setupMSALLogger()
         return true
-    }
-
-    private func setupFirebaseWith(application: UIApplication) {
-        Messaging.messaging().delegate = self
-        if #available(iOS 10.0, *) {
-            UNUserNotificationCenter.current().delegate = self
-            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-            UNUserNotificationCenter.current().requestAuthorization(
-                    options: authOptions,
-                    completionHandler: {_, _ in })
-        } else {
-            let settings: UIUserNotificationSettings =
-                    UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
-        }
-
-        application.registerForRemoteNotifications()
     }
 
 
@@ -53,7 +31,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-
         print(userInfo)
     }
 
@@ -62,10 +39,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-
         // Print full message.
         print(userInfo)
-
         completionHandler(UIBackgroundFetchResult.newData)
     }
     // [END receive_message]
@@ -86,6 +61,40 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Received callback!")
         MSALPublicClientApplication.handleMSALResponse(url)
         return true
+    }
+}
+
+// MARK: Setup AppDelegate
+extension AppDelegate {
+    private func setupMainWindow() {
+        window = WindowFactory.make()
+        window.rootViewController = RootViewController()
+        window.makeKeyAndVisible()
+    }
+
+    private func setupMSALLogger() {
+        MSALLogger.shared().setCallback { (logLevel, message, containsPII) in
+            if (!containsPII) {
+                print("%@", message!)
+            }
+        }
+    }
+
+    private func setupFirebaseWith(application: UIApplication) {
+        Messaging.messaging().delegate = self
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                    options: authOptions,
+                    completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                    UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+
+        application.registerForRemoteNotifications()
     }
 }
 
