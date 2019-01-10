@@ -17,6 +17,8 @@
 		132088D90A545A8A9FFCAE11 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132080B43B5054687EDFFB41 /* UITableViewCell.swift */; };
 		132088DC5BEA3F9071867046 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208F0152537F73CADF10B0 /* EventDetailViewController.swift */; };
 		13208B3809503533F204EFB4 /* WindowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132080AF51E50DACAD01E142 /* WindowFactory.swift */; };
+		13208E7B851A8F97CB499B1B /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208CDBB8A4B2DD8D8A16D9 /* Strings.swift */; };
+		13208F735BCD1C33B3A2F3C5 /* UIActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13208FE14E183F3CE702333B /* UIActivityIndicatorViewController.swift */; };
 		2C6715A830AC25D3893F10E8 /* Pods_HypeSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90B8E3C919E3D7C2F3F807C /* Pods_HypeSocial.framework */; };
 		5719C3D221C1EA8E00CB6961 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5719C3D021C1EA8E00CB6961 /* NVActivityIndicatorView.framework */; };
 		5719C3D321C1EA8E00CB6961 /* NVActivityIndicatorViewAppExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5719C3D121C1EA8E00CB6961 /* NVActivityIndicatorViewAppExtension.framework */; };
@@ -67,9 +69,11 @@
 		132085B21FB3CC6C92A33FEB /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		132086652FF90BD2F686F93E /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		132089CF91BC36B3424F2C4A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		13208CDBB8A4B2DD8D8A16D9 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		13208D02BD8F371A2BA776B2 /* TempServiceMSAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempServiceMSAL.swift; sourceTree = "<group>"; };
 		13208E1F36BD6635ACDB0596 /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		13208F0152537F73CADF10B0 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		13208FE14E183F3CE702333B /* UIActivityIndicatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		1FE3FD10727D9CDABD9A5BD6 /* Pods-HypeSocialTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocialTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocialTests/Pods-HypeSocialTests.release.xcconfig"; sourceTree = "<group>"; };
 		4162FF28DAE0C6C5667A82FA /* Pods-HypeSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HypeSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-HypeSocial/Pods-HypeSocial.release.xcconfig"; sourceTree = "<group>"; };
 		5719C3D021C1EA8E00CB6961 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				13208EFDEDA4EBD70C701444 /* Service */,
 				13208B1B2AF2AC1D47D910B1 /* Extension */,
 				13208099ED4D40E781927C66 /* Factory */,
+				13208CDBB8A4B2DD8D8A16D9 /* Strings.swift */,
+				13208FE14E183F3CE702333B /* UIActivityIndicatorViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -529,6 +535,8 @@
 				1320843F5CFD847D2A7EF9A9 /* ProfileViewController.swift in Sources */,
 				13208344AE4E5CC771811ED4 /* RootViewController.swift in Sources */,
 				13208B3809503533F204EFB4 /* WindowFactory.swift in Sources */,
+				13208E7B851A8F97CB499B1B /* Strings.swift in Sources */,
+				13208F735BCD1C33B3A2F3C5 /* UIActivityIndicatorViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
