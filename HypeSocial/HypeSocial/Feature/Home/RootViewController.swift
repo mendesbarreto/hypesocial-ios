@@ -4,9 +4,8 @@
 //
 
 import UIKit
-import NVActivityIndicatorView
 
-final class RootViewController: UIViewController, NVActivityIndicatorViewable {
+final class RootViewController: UIActivityIndicatorViewController {
 
     private let tempServiceMSAL = TempServiceMSAL.instance
 
@@ -17,13 +16,12 @@ final class RootViewController: UIViewController, NVActivityIndicatorViewable {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        view.backgroundColor = .blue
-        let activityData = ActivityData(message: "Get Info from Outlook", type: .ballScaleRippleMultiple)
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(activityData, nil)
+        view.backgroundColor = .levioGreen
+        showLoading(withMessage: Strings.Root.getInfoFromOutlook)
         tempServiceMSAL.start()
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-            NVActivityIndicatorPresenter.sharedInstance.setMessage("Searching user...")
+            self.update(loadingMessage: Strings.Root.searchUser)
         }
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4) {
@@ -37,7 +35,7 @@ final class RootViewController: UIViewController, NVActivityIndicatorViewable {
 
     private func gotoLogin() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-            NVActivityIndicatorPresenter.sharedInstance.setMessage("User not logged in")
+            self.update(loadingMessage: Strings.Root.userNotLoggedIn)
         }
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
@@ -51,7 +49,7 @@ final class RootViewController: UIViewController, NVActivityIndicatorViewable {
 
     private func gotoEventList() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-            NVActivityIndicatorPresenter.sharedInstance.setMessage("Get user Events")
+            self.update(loadingMessage: Strings.Root.getUserEventsList)
         }
 
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
@@ -59,12 +57,8 @@ final class RootViewController: UIViewController, NVActivityIndicatorViewable {
                     .instantiateViewController(withIdentifier: String(describing: EventListViewController.self))
             let eventListNavViewController = UINavigationController(rootViewController: eventListViewController)
             self.present(eventListNavViewController, animated: true)
+            self.tempServiceMSAL.currentAccount()
             self.dismissLoading()
         }
-    }
-
-    private func dismissLoading() {
-        NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-        tempServiceMSAL.currentAccount()
     }
 }
