@@ -1,0 +1,8 @@
+app_identifier("ca.levio.HypeSocial") # The bundle identifier of your app
+apple_id("mendes-barreto@live.com") # Your Apple email address
+
+itc_team_id("118193874") # App Store Connect Team ID
+team_id("WQVLGGBH98") # Developer Portal Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
